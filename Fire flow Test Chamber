@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Flow Banner</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #1f2a33; /* Dark blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .banner {
+            background-color: #A4C6FF; /* Light blue color */
+            border-radius: 5px;
+            padding: 20px 40px;
+            position: relative;
+        }
+
+        .banner::before, .banner::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #A4C6FF;
+        }
+
+        .banner::before {
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .banner::after {
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-top: none;
+            border-bottom: 10px solid #A4C6FF;
+        }
+
+        .banner h1 {
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <h1>Fire Flow</h1>
+    </div>
+
+</body>
+</html>
